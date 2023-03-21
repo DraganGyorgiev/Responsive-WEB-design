@@ -1,0 +1,326 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oxygen', sans-serif;
+  background-color: rgb(231, 231, 231);
+}
+
+.sorting{
+  display: flex;
+  width: 100%;
+  max-width: 780px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.filter-sort{
+  align-self: center;
+  font-size: 13px;
+  color: gray;
+}
+
+.filter{
+  display: flex;
+  margin-left: 20px;
+}
+
+.dropdown{
+  margin-left: 10px;
+  border: 0.1px solid rgba(128, 128, 128, 0.514);
+  height: 40px;
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 10px;
+}
+
+.item {
+  display: flex;
+  box-shadow: 0 10px 12px rgba(141, 138, 138, 0.856);
+  background-color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.line{
+  height: 1px;
+  background-color:#cccccc;
+}
+
+.trip-info-main{
+  margin-top: 10px;
+  line-height: 12pt;
+}
+
+.tour-name-desktop{
+  padding-top: 10px;
+}
+
+.star-rate-main{
+  display: flex;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 10px;
+}
+
+.star-rate-number{
+  color: rgb(110, 109, 109);
+}
+
+.quote{
+  font-size: 10px;
+  font-style: italic;
+  margin: 8px 0 10px;
+}
+
+.fa{
+  width: 15px;
+  color: orange;
+}
+
+.tour-info{
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tour-info2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 25%;
+  position: relative;
+  padding-right: 10px;
+}
+
+.image{
+  display: flex;
+  width: 100%;
+  height: 170px;
+  float: left;
+  padding: 1px 1px;
+}
+
+.image-sect{
+  position: relative;
+  width: 25%;
+}
+
+.heart{
+  position:absolute;
+  top: 8px;
+  right: 8px;
+  width: 25px;
+  height: 25px;
+  stroke: white;
+  fill: none;
+}
+
+.heart:hover{
+  fill: rgb(245, 50, 50);
+  stroke: none;
+}
+
+.disc{
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-width: 0 45px 45px 0;
+  border-color: transparent #e04d3c transparent transparent;
+  border-style: solid;
+  right: 1px;
+  top: 1px;
+}
+
+.disc-price{
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+  transform: rotate(45deg);
+  color: white;
+  left: 20px;
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt {
+  grid-column-start: 1;
+  color: rgb(176, 173, 173);
+  font-size: 10px;
+}
+
+dd {
+  grid-column-start: 2;
+  font-size: 11px;
+  margin-left: 40px;
+}
+.duration-from{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  font-size: 14px;
+}
+
+.duration-text{
+  color: rgb(176, 173, 173);
+}
+
+.duration, .from-text{
+  width: 50%;
+}
+
+.price{
+  color: #20b174;
+  font-weight: 700;
+}
+
+.show-more{
+  padding: 0 6px;
+  color: #3396cf;
+}
+
+.date{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 11px;
+  padding: 8px 0;
+}
+
+.from-date1, .from-date2{
+  width: 50%;
+}
+.from-date{
+  color: rgb(110, 109, 109);
+}
+
+.my-button{
+  width: 100%;
+  border: none;
+  height: 30px;
+  background-color: orange;
+  color: white;
+  border-radius: 3px;
+  font-weight: 700;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='%23fff'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+
+@media screen and (max-width: 640px) {
+  .sorting{
+    padding: 0 10px;
+    flex-direction: row-reverse;
+  }
+  .image-sect{
+    width: 100%;
+  }
+  .image{
+    padding: 1px 1px;
+    height: 200px;
+  }
+  /* .tour-name-mobile{
+    display: block;
+    padding: 0;
+  }
+  .tour-name-desktop{
+    display: none;
+  } */
+  .star-rate-main{
+    font-size: 9px;
+    padding: 8px 0 8px;
+  }
+  .star-rate-number{
+    padding-left: 5px;
+  }
+  .fa{
+    width: 10px;
+  }
+  .quote {
+    display: none;
+  }
+  .disc{
+    display: none;
+  }
+  .date{
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  dt,dd{
+    font-size: 11px;
+  }
+  .item{
+    display: flex;
+    flex-direction: column;
+  }
+  .tour-info2{
+    width: 100%;
+    padding: 15px;
+  }
+  .duration-from{
+    font-size: 12px;
+  }
+  .price{
+    font-size: 16px;
+  }
+  .my-button{
+    width: 95%;
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .filter{
+    flex-direction: column;
+    width: 50%;
+    margin: 0;
+  }
+  .filter:first-of-type{
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5px;
+  }
+  .filter-sort{
+    align-self: baseline;
+  }
+  .dropdown{
+    height: 40px;
+    margin: 0;
+  }
+}
+
+/* @media screen and (min-width:641px) {
+  .tour-name-mobile{
+    display: none;
+  }
+  .tour-name-desktop{
+    display: block;
+  }
+} */
